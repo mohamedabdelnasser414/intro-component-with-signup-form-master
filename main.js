@@ -12,14 +12,14 @@ form.addEventListener("submit", (e)=> {
             return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail.value)
             };
 
-            
+
         if (inputEl.value ==""){
             inputEl.classList.add("error");
             errorMsgEl.style.display = "block";
         }else if(inputEl.id =="email-address"){
             if(!ValidateEmail(inputEl)){
                 inputEl.classList.add("error");
-                errorMsgEl.innerHTML ="You have entered an invalid email address!";
+                errorMsgEl.innerHTML ="Looks like this is not an email";
                 errorMsgEl.style.display = "block";
             }else{
                 inputEl.classList.remove("error");
